@@ -1,7 +1,7 @@
 import pandas as pd
 import ast
 
-df = pd.read_csv('/home/isabella_gallego/Documentos/IC/incompletos.tsv', sep='\t')
+df = pd.read_csv('route/to/file.tsv', sep='\t')
 
 # Ground truth
 ground_truth_columns = ['Species name', 'Cultivar', 'Genotype', 'Treatment', 'Dev stage', 'Tissue', 'Age']
@@ -55,6 +55,6 @@ for index, row in df.iterrows():
         })
 
 results_df = pd.DataFrame(results)
-results_df.to_excel('resultados_evaluacion_modelos.xlsx', index=False)
+results_df.to_excel('x_results.xlsx', index=False)
 
-print("Evaluación completada y guardada en 'resultados_evaluacion_modelos.xlsx'")
+print("Evaluation completed and stored in 'x_results.xlsx'")
